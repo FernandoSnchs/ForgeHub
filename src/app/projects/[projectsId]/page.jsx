@@ -95,7 +95,7 @@ export default function ProjectPage() {
   async function handleToggle(task) {
     setLoadingTaskId(task.id)
     try {
-      const res = await apifetch(`/api/task/${task.id}`, {
+      const res = await apiFetch(`/api/task/${task.id}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ completed: !task.completed }),
